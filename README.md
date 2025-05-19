@@ -1,44 +1,149 @@
-# Bare Context Network
-This project is a starter template for a generic context-network (more info at https://jwynia.github.io/context-networks/). It can be used as a collaboration context manager for a wide range of projects. They are used for software projects, writing projects of all kinds (fiction, non-fiction, marketing, technical, etc.), building knowledge bases, managing research and analysis and more.
+# Analysis Context Network
 
-This particular template repository is generic so that it isn't aimed at any one of those project types. Other templates exist (or will soon) that are aimed at common project types. Look at those and use one if it seems like a good match. But, if not, use this one.
+This project is a specialized template for a context network focused on document, repository, and log analysis (more info about context networks at https://jwynia.github.io/context-networks/). It is designed to support projects where users need to analyze collections of documents, code repositories, log files, or similar sets of materials, and build a structured understanding of these materials using LLM agents.
+
+## Purpose
+
+This template provides a specialized structure for:
+
+1. **Organizing Source Materials**: Tracking and managing documents, repositories, logs, or datasets that need to be analyzed
+2. **Documenting Analysis Frameworks**: Capturing the methodologies and approaches used to analyze materials
+3. **Recording Analysis Artifacts**: Systematically documenting entities, patterns, and relationships discovered during analysis
+4. **Synthesizing Findings**: Developing coherent insights from analysis results
+5. **Specifying Tool Requirements**: Documenting requirements for tools that can work with the analyzed materials
+
+The template is particularly useful for:
+
+- Research projects involving document analysis
+- Code repository audits and understanding
+- Log analysis and pattern identification
+- Dataset exploration and insight generation
+- Requirements gathering for tool development based on analysis findings
+
+## Structure
+
+The context network is organized into specialized sections:
+
+```
+context-network/
+├── discovery.md                    # Navigation guide with analysis focus
+├── foundation/                     # Core project information
+│   ├── project_definition.md       # Analysis project goals
+│   ├── structure.md                # Project structure overview
+│   ├── principles.md               # Analysis principles and standards
+│   └── analysis_approach.md        # Overall analysis methodology
+├── source_material/                # Information about source materials
+│   ├── inventory.md                # Catalog of all source materials
+│   ├── acquisition.md              # How materials were acquired
+│   └── preprocessing.md            # Any preprocessing applied
+├── analysis/                       # Analysis-specific information
+│   ├── frameworks/                 # Analysis frameworks used
+│   ├── patterns/                   # Identified patterns
+│   ├── entities/                   # Key entities discovered
+│   ├── relationships/              # Relationships between entities
+│   └── findings/                   # Key findings from analysis
+├── processes/                      # Process documentation
+│   ├── ingestion.md                # Source material ingestion process
+│   ├── analysis.md                 # Analysis workflows
+│   ├── validation.md               # Validation procedures
+│   └── synthesis.md                # Synthesizing findings
+├── tools/                          # Tools for analysis
+│   ├── requirements/               # Tool requirements
+│   ├── evaluations/                # Tool evaluations
+│   └── workflows/                  # Tool workflows
+└── [additional standard sections]  # Decisions, connections, meta, etc.
+```
 
 ## Getting Started
-Context networks are intended to be used with an LLM agent that has file access to all of the files in the project folder. For people in software development professions, that can be agents they write. But, for most people, the easiest access to such agents is via IDE coding tools.
 
-Set up the prompts (see below) and start a planning conversation and describe your project, your goals, your constraints, etc. When the plan looks good, let it enhance the context network. Then start with real tasks for the project.
+1. **Set Up Your Environment**:
+   - Clone this template repository
+   - Ensure you have an LLM agent with file access (see Tools section below)
+   - Configure your agent with context network instructions
 
-## Cost
-Because context networks are a relatively cutting-edge approach to collaboration with LLM AI agents, these tools do cost money and some of the best of them can cost more money than you may be expecting. The costs on such things are dropping and much of what we're doing with context networks is figuring out the ways to work that will be more widespread next year and beyond, when these costs drop. If these tools are too expensive for your budget, that probably means you need to wait a bit.
+2. **Define Your Analysis Project**:
+   - Update `foundation/project_definition.md` with your specific analysis goals
+   - Document your analysis approach in `foundation/analysis_approach.md`
+
+3. **Begin Source Material Management**:
+   - Document your source materials in `source_material/inventory.md`
+   - Record acquisition details in `source_material/acquisition.md`
+   - Document any preprocessing in `source_material/preprocessing.md`
+
+4. **Start Analysis**:
+   - Follow the process in `processes/analysis.md`
+   - Use the templates in `analysis/` directories to document your findings
+   - Synthesize insights following `processes/synthesis.md`
+
+5. **Develop Tool Requirements**:
+   - Document tool requirements in `tools/requirements/` based on your analysis
+
+## Analysis Workflow
+
+The typical workflow for an analysis project using this template:
+
+1. **Acquisition**: Identify and acquire source materials
+2. **Ingestion**: Document and preprocess materials
+3. **Framework Selection**: Choose appropriate analysis frameworks
+4. **Analysis**: Identify entities, patterns, and relationships
+5. **Synthesis**: Develop findings and insights
+6. **Tool Requirements**: Specify requirements for tools based on analysis
 
 ## Tools
-Cursor (https://www.cursor.com/) is an all-in-one that comes with LLM chat and an agent that can act on the files.
 
-Cursor is built on VSCode (https://code.visualstudio.com/), which is a more generic code/text editor that can have plugins added. One we use a lot with context networks is Cline (https://cline.bot/). Cline's agent can be pointed at a wide range of LLM APIs that you use your own keys/billing for or their own management of that. A popular solution is to use OpenRouter (https://openrouter.ai/) which lets you use most of the LLM models available today.
+Context networks are intended to be used with an LLM agent that has file access to all of the files in the project folder.
 
-## Patterns
-### Prompts
-For whatever agent you use, you need to include instructions in the system prompt or custom instructions that tell it about context networks and how to navigate them. The prompt in /inbox/custom-instructions-prompt.md is the one a lot of people are using for Cline with Claude Sonnet as the model.
+Recommended tools include:
 
-Add it in either your agent's configuration screen or via it's file-based prompt management system.
+- **Cursor** (https://www.cursor.com/): All-in-one IDE with LLM chat and file access
+- **VSCode** (https://code.visualstudio.com/) with **Cline** (https://cline.bot/): Code editor with agent capabilities
+- **OpenRouter** (https://openrouter.ai/): Access to various LLM models
+
+## Best Practices
+
+### Classification System
+
+This template includes an enhanced classification system specifically for analysis projects:
+
+1. **Domain**: Primary knowledge area (Source Material, Analysis Framework, Pattern, Entity, Relationship, Finding, Tool)
+2. **Source Type**: Type of source material (Document, Repository, Log, Dataset, Mixed)
+3. **Analysis Stage**: Stage in the analysis process (Raw, Processed, Analyzed, Synthesized)
+4. **Stability**: Change frequency expectation (Static, Semi-stable, Dynamic)
+5. **Abstraction**: Detail level (Conceptual, Structural, Detailed)
+6. **Confidence**: Information reliability (Established, Evolving, Speculative)
+7. **Relevance**: Importance to analysis goals (Critical, High, Medium, Low)
+
+### Relationship Types
+
+The template includes specialized relationship types for analysis:
+
+1. **Analysis Relationships**:
+   - `extracted-from`: Information extracted from source
+   - `supports`: Evidence supporting a finding
+   - `contradicts`: Evidence contradicting a finding
+   - `correlates-with`: Statistical correlation
+   - `causes`: Causal relationship
+   - `instance-of`: Example of a pattern
+
+2. **Source Material Relationships**:
+   - `version-of`: Different versions of same material
+   - `derived-from`: Processed form of source
+   - `references`: References another source
+   - `contains`: Contains another source
 
 ### Plan/Act and Specific Scope
-Cline and many other agents have multiple modes, usually offering one that lets you have a conversation with it separate from it taking action on files. In Cline, that's "Plan". In that mode, it won't make any changes to your files.
 
-Use that mode aggressively to get to a specific plan for what will happen when you toggle to act. That plan should have a clear definition of what "done" will look like, should be as close to a single action as possible.
+Use Plan mode aggressively to develop a clear analysis strategy before taking action. Break down complex analysis tasks into specific, manageable steps.
 
-That often means that the action is to detail out a list of tasks that you'll actually have the agent do separately, one at a time. The "do one thing" can mean break the existing scope down another level to get to a more detailed plan. 
+### Monitor and Validate
 
-Basically, the more specific the action that Act mode or its equivalent is given, the better job it will do at managing token budget, at not volunteering to do a bunch of extra things,  and the more likely it does something you've already had a chance to approve.
-
-### Monitor and Interrupt
-The more you actually read and monitor what your agent is doing for anything that you disagree with or sounds incorrect and step in to interrupt, the better your context network will mature. Like hiring a new assistant, where for the first few weeks, you have to tell them your preferences and ways you want things done, it pays off over the long haul.
-
-Interrupt, flip to Plan mode, and ask things like:
-
-* How can we document into the context network a way of working so we don't repeat (the problem/misunderstanding above)?
-* I'd really prefer we always write out a plan with tasks before doing things ad hoc. How can we clarify what's in the context network to make that our process going forward?
-
+Regularly review analysis artifacts for accuracy and completeness. Validate findings against source materials and document confidence levels appropriately.
 
 ### Retrospective
-At the end of tasks and periodically AS a new task, ask how things could be improved. For task end, "What from this conversation and task should be documented in the context network?" For periodic retrospectives, "What have we learned in this project that could be used to improve the context network for our efforts going forward?"
+
+Periodically review your analysis process and findings to identify improvements. Update the context network with lessons learned and refinements to your approach.
+
+## Additional Resources
+
+- Context Networks Guide: https://jwynia.github.io/context-networks/
+- Custom Instructions: See `/inbox/custom-instructions-prompt.md` for agent configuration

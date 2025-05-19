@@ -1,0 +1,8 @@
+#!/bin/bash
+# md2docx - Wrapper script to call the PowerShell md2docx.ps1 script
+
+# Get the directory of this script
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+# Call the PowerShell script with all arguments passed through
+pwsh -File "$SCRIPT_DIR/md2docx.ps1" "$@"
