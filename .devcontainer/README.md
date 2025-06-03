@@ -1,6 +1,6 @@
-# BidFlow Analysis DevContainer
+# Analysis DevContainer
 
-This directory contains the configuration files for the Visual Studio Code DevContainer used in the BidFlow Analysis project. The DevContainer provides a consistent development environment with all necessary tools pre-installed.
+This directory contains the configuration files for the Visual Studio Code DevContainer used in an analysis project. The DevContainer provides a consistent development environment with all necessary tools pre-installed.
 
 ## What's Included
 
